@@ -4,7 +4,7 @@
 #  Magnus Vørs Holmsgaard, Gustav Søndergaard Nybro
 # Date : 11/9 - 2026
 # Lecture: 1 - Introduction to Machine Learning
-# Dependencies:
+# Dependencies: scikit-learn, numpy, matplotlib
 # Python version: 3.13
 # Functionality: This script fits a polynomial regiression model to the sampled data,
 #  to show how degree, regularization and sample size affect overfitting.

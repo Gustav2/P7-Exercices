@@ -12,3 +12,11 @@ P7-Exercies/
 ├── ...
 └── README.md
 ```
+
+## Zipping correctly
+Starting from the root of the repo. Remember to correctly name Lectures and group number. 
+
+```bash
+cd Lecture-1/
+zip -r Lecture_1_B2-205.zip .
+```
