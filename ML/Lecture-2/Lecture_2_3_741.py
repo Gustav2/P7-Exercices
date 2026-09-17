@@ -1,6 +1,15 @@
-#!/usr/bin/env python
-# coding: utf-8
-
+# ###################################
+# Group ID : 741
+# Members : Nikolaj Ask Albertsen, Rui Maria Martins Loureiro, Bjarki Fróðason Í Eyðansstovu,
+#  Magnus Vørs Holmsgaard, Gustav Søndergaard Nybro
+# Date : 17/9 - 2026
+# Lecture: 2/3 - Bayesian decision theory / Parametric and nonparametric methods
+# Dependencies: numpy
+# Python version: 3.13
+# Functionality: Gaussian Bayes classifier
+# ###################################
+#
+#
 # # Exercise
 # ## You are given, as the train data, trn_x and trn_y along with their class labels trn_x_class and trn_y_class. The task is to classify the following TEST data.
 #
@@ -13,30 +22,30 @@
 import numpy as np
 
 # Train data
-train_x = np.loadtxt("dataset1_G_noisy_ASCII/trn_x.txt")
-train_x_label = np.loadtxt("dataset1_G_noisy_ASCII/trn_x_class.txt")
+train_x = np.loadtxt("data/trn_x.txt")
+train_x_label = np.loadtxt("data/trn_x_class.txt")
 
-train_y = np.loadtxt("dataset1_G_noisy_ASCII/trn_y.txt")
-train_y_label = np.loadtxt("dataset1_G_noisy_ASCII/trn_y_class.txt")
+train_y = np.loadtxt("data/trn_y.txt")
+train_y_label = np.loadtxt("data/trn_y_class.txt")
 
 train_mean = np.mean(train_x, axis= 0)
 train_var = np.var(train_x, axis= 0)
 
 # Test data
-test_x = np.loadtxt("dataset1_G_noisy_ASCII/tst_x.txt")
-test_x_label = np.loadtxt("dataset1_G_noisy_ASCII/tst_x_class.txt")
+test_x = np.loadtxt("data/tst_x.txt")
+test_x_label = np.loadtxt("data/tst_x_class.txt")
 
-test_y = np.loadtxt("dataset1_G_noisy_ASCII/tst_y.txt")
-test_y_label = np.loadtxt("dataset1_G_noisy_ASCII/tst_y_class.txt")
+test_y = np.loadtxt("data/tst_y.txt")
+test_y_label = np.loadtxt("data/tst_y_class.txt")
 
-test_y_126 = np.loadtxt("dataset1_G_noisy_ASCII/tst_y_126.txt")
-test_y_126_label = np.loadtxt("dataset1_G_noisy_ASCII/tst_y_126_class.txt")
+test_y_126 = np.loadtxt("data/tst_y_126.txt")
+test_y_126_label = np.loadtxt("data/tst_y_126_class.txt")
 
-test_xy = np.loadtxt("dataset1_G_noisy_ASCII/tst_xy.txt")
-test_xy_label = np.loadtxt("dataset1_G_noisy_ASCII/tst_xy_class.txt")
+test_xy = np.loadtxt("data/tst_xy.txt")
+test_xy_label = np.loadtxt("data/tst_xy_class.txt")
 
-test_xy_126 = np.loadtxt("dataset1_G_noisy_ASCII/tst_xy_126.txt")
-test_xy_126_label = np.loadtxt("dataset1_G_noisy_ASCII/tst_xy_126_class.txt")
+test_xy_126 = np.loadtxt("data/tst_xy_126.txt")
+test_xy_126_label = np.loadtxt("data/tst_xy_126_class.txt")
 
 
 # Looking at the data we see that our input features is 2-dimensional, i.e., it has two values per data point.
