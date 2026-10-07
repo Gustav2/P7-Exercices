@@ -18,7 +18,6 @@
 
 # In[1]:
 
-
 import numpy as np
 
 # Train data
